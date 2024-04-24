@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrossel de Imagens</title>
+<style>
+    .carousel {
+        width: 300px; /* largura do carrossel */
+        height: 200px; /* altura do carrossel */
+        overflow-x: auto; /* permite rolar horizontalmente */
+        white-space: nowrap; /* impede que as imagens quebrem para a próxima linha */
+        cursor: grab; /* muda o cursor para um cursor de mão quando o mouse estiver sobre o carrossel */
+    }
+
+    .carousel img {
+        width: 100%; /* faz com que as imagens preencham todo o espaço disponível */
+        height: auto; /* mantém a proporção da imagem */
+    }
+
+    /* quando o mouse está sobre o carrossel, o cursor muda para um cursor de mão com um ícone de arrastar */
+    .carousel:hover {
+        cursor: grabbing;
+    }
+</style>
+</head>
+<body>
+
+<div class="carousel">
+    <img src="imagem1.jpg" alt="Imagem 1">
+    <img src="imagem2.jpg" alt="Imagem 2">
+    <img src="imagem3.jpg" alt="Imagem 3">
+    <!-- Adicione mais imagens conforme necessário -->
+</div>
+
+</body>
+</html>
