@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+        #dayNightDiv {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #000;
+            font-family: Arial, sans-serif;
+        }
+        #editHouseDiv {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #000;
+            font-family: Arial, sans-serif;
+            max-height: 90%;
+            overflow-y: auto;
+            display: none; /* Initially hidden */
+        }
+        #editHouseDiv .category {
+            display: none; /* Hide categories by default */
+        }
+        #editHouseDiv label {
+            display: block;
+            margin: 5px 0;
+        }
+        #categoryButtons {
+            margin-bottom: 10px;
+        }
+        #categoryButtons button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dayNightDiv">Day</div>
+    <div id="editHouseDiv">
+        <div id="categoryButtons">
+            <button onclick="showCategory('Walls')">Walls</button>
+            <button onclick="showCategory('Doors')">Doors</button>
+            <button onclick="showCategory('Windows')">Windows</button>
+            <button onclick="showCategory('Roof')">Roof</button>
+        </div>
+        <div id="Walls" class="category">
+            <h2>Walls</h2>
+        </div>
+        <div id="Doors" class="category">
+            <h2>Doors</h2>
+        </div>
+        <div id="Windows" class="category">
+            <h2>Windows</h2>
+        </div>
+        <div id="Roof" class="category">
+            <h2>Roof</h2>
+        </div>
+    </div>
+    <script src="library/three.js"></script>
+    <script src="library/OrbitControls.js"></script>
+    <script src="js/game.js"></script> 
+    <script src="js/rpg.js"></script> 
+</body>
+</html>
+
